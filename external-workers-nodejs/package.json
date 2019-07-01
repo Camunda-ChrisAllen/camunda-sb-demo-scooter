@@ -1,0 +1,10 @@
+{
+  "name": "multiple-workers",
+  "version": "1.0.0",
+  "main": "workers.js",
+  "author": "Camunda Services GmbH",
+  "license": "Apache License 2.0\"",
+  "dependencies": {
+    "camunda-external-task-client-js": "1.1.1"
+  }
+}
