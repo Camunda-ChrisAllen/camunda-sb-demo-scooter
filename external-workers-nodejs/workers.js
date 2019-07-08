@@ -27,18 +27,6 @@ client.subscribe("chargeAccount", async function ({task, taskService}) {
     console.log("......picking up work for chargeAccount");
 
     if (Math.random() < 0.5) {
-        processVariables.set("scootNow", true);
-    } else {
-        processVariables.set("scootNow", false);
-    }
-
-    if (Math.random() < 0.5) {
-        processVariables.set("shortRide", true);
-    } else {
-        processVariables.set("shortRide", false);
-    }
-
-    if (Math.random() < 0.5) {
         processVariables.set("batteryLow", true);
     } else {
         processVariables.set("batteryLow", false);
@@ -59,24 +47,8 @@ client.subscribe("createAccount", async function ({task, taskService}) {
 
     console.log("......picking up work for createAccount");
 
-    if (Math.random() < 0.5) {
-        processVariables.set("scootNow", true);
-    } else {
-        processVariables.set("scootNow", false);
-    }
-
-    if (Math.random() < 0.5) {
-        processVariables.set("shortRide", true);
-    } else {
-        processVariables.set("shortRide", false);
-    }
-
-    if (Math.random() < 0.5) {
-        processVariables.set("batteryLow", true);
-    } else {
-        processVariables.set("batteryLow", false);
-    }
     console.log("......finishing up createAccount");
+
     await taskService.complete(task, processVariables);
 
 });
@@ -92,24 +64,8 @@ client.subscribe("locateScooter", async function ({task, taskService}) {
 
     console.log("......picking up work for locateScooter");
 
-    if (Math.random() < 0.5) {
-        processVariables.set("scootNow", true);
-    } else {
-        processVariables.set("scootNow", false);
-    }
-
-    if (Math.random() < 0.5) {
-        processVariables.set("shortRide", true);
-    } else {
-        processVariables.set("shortRide", false);
-    }
-
-    if (Math.random() < 0.5) {
-        processVariables.set("batteryLow", true);
-    } else {
-        processVariables.set("batteryLow", false);
-    }
     console.log("......finishing up locateScooter");
+
     await taskService.complete(task, processVariables);
 
 });
@@ -126,22 +82,11 @@ client.subscribe("lockScooter", async function ({task, taskService}) {
     console.log("......picking up work for lockScooter");
 
     if (Math.random() < 0.5) {
-        processVariables.set("scootNow", true);
-    } else {
-        processVariables.set("scootNow", false);
-    }
-
-    if (Math.random() < 0.5) {
         processVariables.set("shortRide", true);
     } else {
         processVariables.set("shortRide", false);
     }
 
-    if (Math.random() < 0.5) {
-        processVariables.set("batteryLow", true);
-    } else {
-        processVariables.set("batteryLow", false);
-    }
     console.log("......finishing up lockScooter");
     await taskService.complete(task, processVariables);
 
@@ -164,17 +109,6 @@ client.subscribe("seedWallet", async function ({task, taskService}) {
         processVariables.set("scootNow", false);
     }
 
-    if (Math.random() < 0.5) {
-        processVariables.set("shortRide", true);
-    } else {
-        processVariables.set("shortRide", false);
-    }
-
-    if (Math.random() < 0.5) {
-        processVariables.set("batteryLow", true);
-    } else {
-        processVariables.set("batteryLow", false);
-    }
     console.log("......finishing up seedWallet");
     await taskService.complete(task, processVariables);
 
@@ -191,23 +125,6 @@ client.subscribe("unlockScooter", async function ({task, taskService}) {
 
     console.log("......picking up work for unlockScooter");
 
-    if (Math.random() < 0.5) {
-        processVariables.set("scootNow", true);
-    } else {
-        processVariables.set("scootNow", false);
-    }
-
-    if (Math.random() < 0.5) {
-        processVariables.set("shortRide", true);
-    } else {
-        processVariables.set("shortRide", false);
-    }
-
-    if (Math.random() < 0.5) {
-        processVariables.set("batteryLow", true);
-    } else {
-        processVariables.set("batteryLow", false);
-    }
     console.log("......finishing up unlockScooter");
     await taskService.complete(task, processVariables);
 
