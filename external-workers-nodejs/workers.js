@@ -26,11 +26,6 @@ client.subscribe("chargeAccount", async function ({task, taskService}) {
 
     console.log("......picking up work for chargeAccount");
 
-    if (Math.random() < 0.5) {
-        processVariables.set("batteryLow", true);
-    } else {
-        processVariables.set("batteryLow", false);
-    }
     console.log("......finishing up chargeAccount");
     await taskService.complete(task, processVariables);
 
@@ -85,6 +80,12 @@ client.subscribe("lockScooter", async function ({task, taskService}) {
         processVariables.set("shortRide", true);
     } else {
         processVariables.set("shortRide", false);
+    }
+
+    if (Math.random() < 0.5) {
+        processVariables.set("batteryLow", true);
+    } else {
+        processVariables.set("batteryLow", false);
     }
 
     console.log("......finishing up lockScooter");
