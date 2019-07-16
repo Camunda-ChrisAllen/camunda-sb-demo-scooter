@@ -51,7 +51,7 @@ public class ProcessTest {
   }
 
   @Test
-  @Deployment(resources="process.bpmn") // only required for process test coverage
+  @Deployment(resources="scooter.bpmn") // only required for process test coverage
   public void testHappyPath() {
     // Either: Drive the process by API and assert correct behavior by camunda-bpm-assert, e.g.:
     //ProcessInstance processInstance = processEngine().getRuntimeService().startProcessInstanceByKey(PROCESS_DEFINITION_KEY);

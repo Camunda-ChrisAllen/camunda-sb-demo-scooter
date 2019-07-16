@@ -64,7 +64,7 @@ public class ProcessScenarioTest {
   private ProcessScenario myProcess;
 
   @Test
-  @Deployment(resources="process.bpmn") // only required for process test coverage
+  @Deployment(resources="scooter.bpmn") // only required for process test coverage
   public void testHappyPath() {
     // Define scenarios by using camunda-bpm-assert-scenario:
 
