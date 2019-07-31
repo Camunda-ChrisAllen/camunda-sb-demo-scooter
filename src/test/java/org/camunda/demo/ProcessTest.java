@@ -2,6 +2,7 @@ package org.camunda.demo;
 
 import org.apache.ibatis.logging.LogFactory;
 import org.camunda.bpm.engine.ProcessEngine;
+import org.camunda.bpm.engine.history.HistoricTaskInstance;
 import org.camunda.bpm.engine.runtime.ProcessInstance;
 import org.camunda.bpm.engine.test.Deployment;
 import org.camunda.bpm.engine.test.ProcessEngineRule;
@@ -20,6 +21,8 @@ import static org.camunda.bpm.engine.test.assertions.ProcessEngineTests.*;
 import static org.junit.Assert.*;
 
 import javax.annotation.PostConstruct;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Test case starting an in-memory database-backed Process Engine.
@@ -53,6 +56,7 @@ public class ProcessTest {
   @Test
   @Deployment(resources="scooter.bpmn") // only required for process test coverage
   public void testHappyPath() {
+
     // Either: Drive the process by API and assert correct behavior by camunda-bpm-assert, e.g.:
     //ProcessInstance processInstance = processEngine().getRuntimeService().startProcessInstanceByKey(PROCESS_DEFINITION_KEY);
     
